@@ -4,7 +4,7 @@ default:
    Behat\MinkExtension:
             default_session: goutte
             javascript_session: selenium2
-            base_url: 'http://yakutsk.ru/'
+            base_url: 'http://vds-f237.1gb.ru/'
             goutte: ~
             selenium2:
                 wd_host: 'http://127.0.1.1:4444/wd/hub'
