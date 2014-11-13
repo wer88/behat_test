@@ -26,7 +26,7 @@ class FeatureContext extends MinkContext
      /**
      * @Given /^(?:|я )кликаю на "([^"]*)"$/
      */
-    public function iaAvtorizuiusPodPolZovatieliem($locator)
+    public function iaKlikaiuNa($locator)
     {
         $page = $this->getSession()->getPage();
 

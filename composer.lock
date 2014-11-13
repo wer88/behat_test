@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "f860cffeedb85b550a8f7b6f64a58f04",
+    "hash": "e4e76b798105277c661be01b6c4a8cb1",
     "packages": [
         {
             "name": "alexandresalome/php-selenium",
@@ -1030,6 +1030,41 @@
             "time": "2014-09-15 12:42:36"
         },
         {
+            "name": "netwing/selenium-server-standalone",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/netwing/selenium-server.git",
+                "reference": "060de13c8c14cedba0a721e78e32d3cb755ce267"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/netwing/selenium-server/zipball/060de13c8c14cedba0a721e78e32d3cb755ce267",
+                "reference": "060de13c8c14cedba0a721e78e32d3cb755ce267",
+                "shasum": ""
+            },
+            "bin": [
+                "selenium-server-standalone-2.43.0.jar"
+            ],
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "OpenQA",
+                    "homepage": "http://seleniumhq.org/"
+                }
+            ],
+            "description": "Composer distribution of Selenium Server Standalone, the browser automation framework.",
+            "keywords": [
+                "selenium",
+                "testing"
+            ],
+            "time": "2014-09-11 14:22:14"
+        },
+        {
             "name": "react/promise",
             "version": "v2.1.0",
             "source": {
@@ -1706,7 +1741,8 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "behat/mink-extension": 20
+        "behat/mink-extension": 20,
+        "netwing/selenium-server-standalone": 20
     },
     "prefer-stable": false,
     "platform": [],
