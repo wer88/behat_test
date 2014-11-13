@@ -15,7 +15,7 @@
 		И я ввожу "ya@mail.ru" в поле "REGISTER[EMAIL]"
 		И я ввожу "test" в поле "captcha_word"
 		Тогда я кликаю на "//div[contains(@class, 'b-custom-check')]"
-		Тогда я нажимаю "register_submit_button1"
+		Тогда я нажимаю "register_submit_button"
 		Тогда я должен видеть "Неверно введено слово с картинки"
 		
 		
