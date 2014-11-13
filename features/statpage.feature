@@ -8,6 +8,8 @@
         И я перехожу на "statistics/"
         Тогда я должен видеть элемент "ul.b-menu__list"
         И я должен видеть элемент "div.b-parts"
+        И я должен видеть элемент "div.two-grafic"
+        И я должен видеть элемент "div.slider-statistic"
 
 		
 		
