@@ -41,4 +41,21 @@ class FeatureContext extends MinkContext
         $element->click();
         
     }
+
+    /**
+     * @Given я ввожу каптчу в поле :locator
+     */
+    public function iaVvozhuKaptchuVPolie($locator)
+    {   
+        $page = $this->getSession()->getPage();
+        $captcha = $page->find("xpath","//input[@name='sessid']")->getValue();
+        $code = file_get_contents('http://vds-f237.1gb.ru/local/backend/captcha_hack.php?code='.$captcha);
+        $link = 'http://vds-f237.1gb.ru/local/backend/captcha_hack.php?code='.$captcha;
+        echo $link;
+        
+        echo $code;
+
+        $page->fillField('Число с картинки', $code);
+    }
+
 }
