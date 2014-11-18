@@ -50,6 +50,12 @@ class FeatureContext extends MinkContext
         $page = $this->getSession()->getPage();
         $captcha = $page->find("xpath","//input[@name='sessid']")->getValue();
         $code = file_get_contents('http://vds-f237.1gb.ru/local/backend/captcha_hack.php?code='.$captcha);
+
+        if (!$code) {
+
+            throw new Exception('Не удалось получить код каптчи');
+        }
+
         $link = 'http://vds-f237.1gb.ru/local/backend/captcha_hack.php?code='.$captcha;
         echo $link;
         
