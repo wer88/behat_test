@@ -1,4 +1,3 @@
-# mink_driver
 default:
  extensions:
    Behat\MinkExtension:
@@ -10,3 +9,36 @@ default:
                 wd_host: 'http://127.0.1.1:4444/wd/hub'
                 browser: 'firefox'
                 capabilities: { "browserName": "firefox"}
+chrome:
+ extensions:
+   Behat\MinkExtension:
+            default_session: goutte
+            javascript_session: selenium2
+            base_url: 'http://vds-f237.1gb.ru/'
+            goutte: ~
+            selenium2:
+                wd_host: 'http://127.0.1.1:4444/wd/hub'
+                browser: 'chrome'
+                capabilities: { "browserName": "chrome"}
+opera:
+ extensions:
+   Behat\MinkExtension:
+            default_session: goutte
+            javascript_session: selenium2
+            base_url: 'http://vds-f237.1gb.ru/'
+            goutte: ~
+            selenium2:
+                wd_host: 'http://127.0.1.1:4444/wd/hub'
+                browser: 'opera'
+                capabilities: { "browserName": "opera", "version": "12.16", "platform": "LINUX"}
+explorer:
+ extensions:
+   Behat\MinkExtension:
+            default_session: goutte
+            javascript_session: selenium2
+            base_url: 'http://vds-f237.1gb.ru/'
+            goutte: ~
+            selenium2:
+                wd_host: 'http://127.0.1.1:4444/wd/hub'
+                browser: 'internet explorer'
+                capabilities: { "browserName": "internet explorer"}
