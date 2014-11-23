@@ -59,4 +59,15 @@ class FeatureContext extends MinkContext
         $page->fillField('Число с картинки', $code);
     }
 
+    /**
+     * @Then я выбираю случайный элемент из списка :arg1
+     */
+    public function iaVybiraiuSluchainyiEliemientIzSpiska($locator)
+    {
+        $page = $this->getSession()->getPage();
+        $captcha = $page->findAll('xpath', $locator);
+        var_dump(count($captcha));
+    }
+
+
 }
