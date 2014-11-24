@@ -65,9 +65,32 @@ class FeatureContext extends MinkContext
     public function iaVybiraiuSluchainyiEliemientIzSpiska($locator)
     {
         $page = $this->getSession()->getPage();
-        $captcha = $page->findAll('xpath', $locator);
-        var_dump(count($captcha));
+        $element = $page->findAll('xpath', $locator);
+        var_dump(count($element));
+        var_dump($page->find('xpath', '//a[text()="Алтай Республика"]')->isVisible());
+        while (!($page->find('xpath', '//a[text()="Алтай Республика"]')->isVisible())) {
+            
+        }
     }
+
+    /**
+     * @Given я раскрываю случайный элемент списка :arg1
+     */
+    public function iaRaskryvaiuSluchainyiEliemientSpiska($locator)
+    {
+        $page = $this->getSession()->getPage();
+        $element = $page->findAll('xpath', $locator);
+        $element[rand(0,count($element)-1)]->click();
+        sleep(3);
+        $element = $page->findAll('xpath', $locator.'/../ul/li/span');
+
+        $element[rand(0,count($element)-1)]->click();
+        sleep(3);
+        $screenshot = $this->getSession()->getDriver()->getScreenshot();
+        file_put_contents('screenshots/test'. date("m-d-y-H-i-s"). '.png', $screenshot);
+
+    }
+
 
 
 }
