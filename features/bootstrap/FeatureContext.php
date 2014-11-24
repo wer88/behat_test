@@ -66,11 +66,11 @@ class FeatureContext extends MinkContext
     {
         $page = $this->getSession()->getPage();
         $element = $page->findAll('xpath', $locator);
-        var_dump(count($element));
-        var_dump($page->find('xpath', '//a[text()="Алтай Республика"]')->isVisible());
-        while (!($page->find('xpath', '//a[text()="Алтай Республика"]')->isVisible())) {
+        //var_dump(count($element));
+        //var_dump($page->find('xpath', '//a[text()="Алтай Республика"]')->isVisible());
+        //while (!($page->find('xpath', '//a[text()="Алтай Республика"]')->isVisible())) {
             
-        }
+        //}
     }
 
     /**
